@@ -19,7 +19,7 @@ def main():
 def encode(encoding):
     encoded = ""
     for num in encoding:
-        new_digit = str(((int(num) + 3) % 10))  # adds 3 to the number inputted and makes not more than one digit
+        new_digit = str(((int(num) + 3) % 10))  # adds 3 to the number inputted and makes not more than one digit 123
         encoded += new_digit
     return encoded
 
