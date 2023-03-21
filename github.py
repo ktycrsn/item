@@ -10,7 +10,7 @@ def main():
             new = encode(encoding)  # storing the encoded password
             print(menu)
         elif choice == "2":
-            print(f'The encoded password is {new}, and the original password is {encoding}.\n')
+            print(f'The encoded password is {new}, and the original password is {decode(new)}.\n')
             print(menu)
         elif choice == "3":
             encode_running = False
@@ -24,7 +24,18 @@ def encode(encoding):
     return encoded
 
 
-
+def decode(encoding):
+    decoder = []
+    for i in range(len(encoding)):
+        num = encoding[i]
+        num = int(num)
+        num = num - 3
+        if num < 0:
+            decoder.append("0")
+        else:
+            num = str(num)
+            decoder.append(num)
+    return "".join(decoder)
 
 if __name__ == "__main__":
     main()
