@@ -30,7 +30,7 @@ def decode(encoding):
         num = encoding[i]
         num = int(num)
         num = num - 3
-        if num < 0:
+        if num < 0:             # make sure the number is not less than 0
             decoder.append("0")
         else:
             num = str(num)
